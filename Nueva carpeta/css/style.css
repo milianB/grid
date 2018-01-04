@@ -1,0 +1,65 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  max-width: 1279px; /* maxima medida a la que se ajusta la pantalla */
+  margin: 0 auto;
+  width: 100%;
+}
+
+.row::before, /* va a ejecutar antes y/o despues*/
+.row::after {
+  content: " ";
+  display: table;
+}
+
+.row::after{
+  clear: both; /*limpiamos float en las columnas*/
+}
+
+[class*="col-"]{ /* seleccionamos todas las columnas que tengan la clase col- */
+border: 3px solid white;
+  min-height: 7px;
+  float: left; //alinearlas a la izquierda, una a lado de la otra
+  padding: 12px;
+}
+
+.col-1{
+  width: 8.33%;
+  background-color: #ffff00;
+
+}
+
+.col-2{
+  width: 16.6%;
+  background-color: #AFFF00;
+}
+
+.col-3{
+  width: 25%;
+  background-color: #1EE2A6;
+}
+
+.col-4{
+  background-color: #01B6AD;
+  width: 33.3%;
+
+}
+
+.col-5{
+  background-color: #9C42D1;
+  width: 50%;
+
+}
+
+.col-6{
+  background-color: #FFFFFF;
+  width: 100%;
+
+}
